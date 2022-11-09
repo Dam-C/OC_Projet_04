@@ -1,4 +1,27 @@
+@import "./Utils/variables";
+@import "./Utils/functions";
+@import "./Utils/mixins";
+@import "./components/buttons";
+@import "./Base/base";
+@import "./Base/typo";
+@import "./layout/header";
+@import "./layout/nav";
+@import "./layout/container";
+@import "./layout/form";
+
+@import "./pages/work";
+
+@import "./pages/about";
+
+@import "./pages/project";
+
+
+
 body {
     margin-left: auto;
     margin-right: auto;
+}
+
+article {
+    padding: $syntax-01;
 }
