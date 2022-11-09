@@ -1,6 +1,6 @@
 @import "./Utils/variables";
-@import "./Utils/functions";
 @import "./Utils/mixins";
+@import "./Utils/functions";
 @import "./components/buttons";
 @import "./Base/base";
 @import "./Base/typo";
@@ -9,14 +9,6 @@
 @import "./layout/container";
 @import "./layout/form";
 
-@import "./pages/work";
-
-@import "./pages/about";
-
-@import "./pages/project";
-
-
-
 body {
     margin-left: auto;
     margin-right: auto;
@@ -24,4 +16,33 @@ body {
 
 article {
     padding: $syntax-01;
+}
+
+
+
+$txt-input-palette: (
+active: (
+    bg: $colour-primary,border: $colour-primary,txt: $colour-white,
+),
+focus: (
+    bg: $colour-primary,
+    border: $colour-primary,
+    txt: $colour-white,
+),
+invalid: (
+    bg: $colour-invalid,
+    border: $colour-white,
+    txt: $colour-white,
+)
+);
+
+
+@mixin txt-input-palette($state) {
+    $palette: map-get($txt-input-palette, $state);
+    border: .1rem solid map-get($palette, border);
+    background-color: map-get($palette, bg);
+    color: map-get($palette, txt);
+}
+
+@each $key, $value in $map {
 }
