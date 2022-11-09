@@ -1,0 +1,11 @@
+{
+  "name": "oc_p4",
+  "version": "1.0.0",
+  "description": "package_p4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "damien_charlois",
+  "license": "ISC"
+}
