@@ -1,1 +1,18 @@
 $font-size: 1rem 2rem 3rem;
+
+@font-face {
+    font-family: 'Shrikhand';
+    src: url('../../fonts/Shrikhand-Regular.ttf');
+    src: url('../../fonts/Shrikhand-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../fonts/Roboto-Regular.ttf');
+    src: url('../../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
