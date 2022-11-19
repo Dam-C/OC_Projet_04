@@ -1,18 +1,63 @@
-$font-size: 1rem 2rem 3rem;
-
 @font-face {
     font-family: 'Shrikhand';
-    src: url('../../fonts/Shrikhand-Regular.ttf');
-    src: url('../../fonts/Shrikhand-Regular.ttf') format('truetype');
+    src: url('../../assets/fonts/Shrikhand-Regular.ttf');
+    src: url('../../assets/fonts/Shrikhand-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url('../../fonts/Roboto-Regular.ttf');
-    src: url('../../fonts/Roboto-Regular.ttf') format('truetype');
+    src: url('../../assets/fonts/Roboto-Regular.ttf');
+    src: url('../../assets/fonts/Roboto-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
+// tailles typo index
+// 30 400 (head/logo) 1,875
+// 16 500 (loc) 1
+// 24 700 (titre intro + titre parties)   1,5
+// 18 300 (sous texte intro)
+// 16 500 (boutons + texte footer) 1
+// 14 500 (nouveau) 1
+// 18 700 (titre restau)
+// 17 300 (loc restau)
+// 18 400 (logo footer)
+
+// tailles typo menus
+// 28 400 (titre)
+// 16 300 (entree plats dessert) 1
+// 18 500 (titre met)
+// 15 300 (plus met)
+// 15 700 (prix met)
+
+//==========
+
+// tailles typo index - desktop
+// 37 400 (titre/logo)
+// 40 700 (titre intro)
+// 16 500 (texte footer) 1
+
+// tailles typo menus - desktop
+// 16 400 (plus met) 1
+
+
+
+
+
+:root {
+    font-family: 'Roboto';
+    text-decoration: none;
+}
+
+h1 {
+    font-family: 'Shrikhand';
+    font-weight: 400;
+    font-size: 1,875rem;
+}
+
+h4 {
+    font-family: 'Shrikhand';
+    color: #ffffff;
+}
