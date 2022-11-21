@@ -2,18 +2,18 @@
 // 30 400 (head/logo) 1,875
 // 16 500 (loc) 1
 // 24 700 (titre intro + titre parties)   1,5
-// 18 300 (sous texte intro)
+// 18 300 (sous texte intro) 1.125
 // 16 500 (boutons + texte footer) 1
 // 14 500 (nouveau) 1
-// 18 700 (titre restau)
-// 17 300 (loc restau)
-// 18 400 (logo footer)
+// 18 700 (titre restau) 1.125
+// 17 300 (loc restau) 1.0625
+// 18 400 (logo footer) 1.125
 
 // tailles typo menus
-// 28 400 (titre)
+// 28 400 (titre) 
 // 16 300 (entree plats dessert) 1
-// 18 500 (titre met)
-// 15 300 (plus met)
+// 18 500 (titre met) 1.125
+// 15 300 (plus met) 
 // 15 700 (prix met)
 
 //==========
@@ -40,7 +40,9 @@ $f-weight: ();
 
 
 
-:root {
+
+
+* {
     font-family: 'Roboto';
     text-decoration: none;
 }
