@@ -8,42 +8,104 @@
 
 @import "./components/buttons";
 
-
-
-
 @import "./layout/header";
 @import "./layout/nav";
 @import "./layout/container";
 @import "./layout/form";
 
-* {
-    font-family: 'Roboto', sans-serif;
-    text-decoration: none;
-}
+
+
 
 body {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.head {
+    background-color: $background-color;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+}
+
+
+.head {
     height: 63px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    @include flex-centering-in-bloc;
     &__title {
-        @include headlogo;
+        @include mob_font_headlogo;
+    }
+    &__loc {
+        height: 50px;
+        @include flex-centering-in-bloc;
+        background-color: $loc-grey;
+        box-shadow:  0px 5px 5px rgba(0, 0, 0, 0.15) inset;
+        @include mob_font_loc-btns-footertxt-dskfootertxt;
     }
 }
 
-.loc {
-    height: 50px;
+.intro {
+    margin: 40px 0 60px 0;
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+        &__title {
+        @include mob_font_introtitle-partstitle;
+    }
+    &__subtext {
+        @include mob_font_introsubtext;
+    }
+    &__button {
+        @include button;
+    }
+}
+
+.fnct {
+    background-color: #ffffff;
+    &__title {
+        @include mob_font_introtitle-partstitle;
+    }
+    &__tile {
+        @include mob_font_loc-btns-footertxt-dskfootertxt;
+    }
+}
+
+.rest {
+    &__title {
+        @include mob_font_introtitle-partstitle;
+    }
+
+}
+
+.rest-tile {
+    &__container {
+
+    }
+    &__img {
+        &--img1 {
+
+        }
+        &--img2 {
+
+        }
+        &--img3 {
+
+        }
+        &--img4 {
+
+        }
+    }
+    &--new {
+        @include mob_font_new;
+    }
+    &__enc {
+        &--title {
+            @include mob_font_restname;
+        }
+        &--subtext {
+            @include mob_font_restloc;
+        }
+    }
 }
 
 .footer {
-    background-color: $back_footer;
+    background-color: $back-footer;
     &__title {
         @include mob_font_footerlogo;
     }

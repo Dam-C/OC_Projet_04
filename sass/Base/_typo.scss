@@ -30,8 +30,17 @@
 // font-family: 'Roboto', sans-serif;
 // font-family: 'Shrikhand', cursive;
 
-@mixin headlogo {
-    font-family: 'Shrikhand', cursive;
+@import "../utils/variables";
+
+
+* {
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    color: $black-font;
+}
+
+@mixin mob_font_headlogo {
+    font-family: "Shrikhand", cursive;
     font-size: 1.875rem;
     font-weight: 400;
 }
@@ -47,8 +56,8 @@
 }
 
 @mixin mob_font_introsubtext {
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 1.125rem;
+    font-weight: 300;
 }
 
 @mixin mob_font_new {
