@@ -1,19 +1,25 @@
+@import "./base/reset";
+@import "./base/base";
+@import "./base/typo";
+
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./utils/functions";
 
 @import "./components/buttons";
 
-@import "./base/base";
-@import "./base/typo";
-@import "./base/reset";
+
+
 
 @import "./layout/header";
 @import "./layout/nav";
 @import "./layout/container";
 @import "./layout/form";
 
-
+* {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
 
 body {
     margin-left: auto;
@@ -26,12 +32,22 @@ body {
     justify-content: space-around;
     align-items: center;
     height: 63px;
-    background-color: aqua;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     &__title {
         @include headlogo;
     }
 }
 
-footer {
+.loc {
+    height: 50px;
+}
+
+.footer {
     background-color: $back_footer;
+    &__title {
+        @include mob_font_footerlogo;
+    }
+    &__nav {
+        @include mob_font_loc-btns-footertxt-dskfootertxt;
+    }
 }

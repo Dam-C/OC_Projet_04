@@ -18,35 +18,57 @@
   </head>
 
   <body>
-    <header>
-      <h1 class="head head__title"><a href="index.html">ohmyfood</a></h1>
-      <p class="loc">
-        <i class="fa-solid fa-location-dot fa-black"></i> Paris, Belleville
-      </p>
+    <header class="head">
+      <h1 class="head__title"><a href="index.html">ohmyfood</a></h1>
     </header>
 
     <main>
-      <h1 class="menu__titre">La palette du gout</h1>
-      <section class="top">
+      <div class="loc loc__text">
+        <i class="fa-solid fa-location-dot fa-black"></i> Paris, Belleville
+      </div>
+
+      <section class="intro">
         <article>
-          <h2>Réservez le menu qui vous convient</h2>
-          <p>
+          <h2 class="intro__title">Réservez le menu qui vous convient</h2>
+          <p class="intro__subtext">
             Découvrez des restaurants d'exception, sélectionnés par nos soins.
           </p>
-          <button class="top__button">Explorez nos restaurants</button>
+          <button class="intro__button">Explorez nos restaurants</button>
         </article>
       </section>
 
-      <section class="restaurants">
-        <h2>Restaurants</h2>
+      <section class="fnct">
+        <article>
+          <h2 class="fnct__title">Fonctionnement</h2>
+          <div class="fnct__tile">
+            <span class="fnct__tile-nbr">1</span
+            ><i class="fa-solid fa-mobile-screen-button"></i>Choisissez votre
+            restaurant
+          </div>
+          <div class="fnct__tile">
+            <span class="fnct__tile-nbr">2</span
+            ><i class="fa-solid fa-list-ul"></i>Choisissez votre restaurant
+          </div>
+          <div class="fnct__tile">
+            <span class="fnct__tile-nbr">3</span
+            ><i class="fa-solid fa-store"></i>Choisissez votre restaurant
+          </div>
+        </article>
+      </section>
 
-        <article class="vign_restau">
-          <a href="restaurants/restaurant_la-palette.html">
-            <div class="rest_img1"></div>
-            <p class="new">Nouveau</p>
-            <div class="rest_enc">
-              <h3>La Palette du goût</h3>
-              <p>Ménilmontant</p>
+      <section class="rest">
+        <h2 class="rest__title">Restaurants</h2>
+
+        <article class="rest-tile">
+          <a
+            href="restaurants/restaurant_la-palette.html"
+            class="rest-tile__container"
+          >
+            <div class="rest-tile__img rest-tile__img--img1"></div>
+            <p class="rest-tile__new">Nouveau</p>
+            <div class="rest-tile__enc">
+              <h3 class="rest-tile__enc-title">La Palette du goût</h3>
+              <p class="rest-tile__enc-subtext">Ménilmontant</p>
               <i class="fa-regular fa-heart"></i
               ><i class="fa-solid fa-heart"></i></div
           ></a>
@@ -90,9 +112,9 @@
       </section>
     </main>
 
-    <footer>
-      <h4 class="footer__title--white">ohmyfood</h4>
-      <nav>
+    <footer class="footer">
+      <h4 class="footer__title">ohmyfood</h4>
+      <nav class="footer__nav">
         <a href="#"
           ><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a
         >
