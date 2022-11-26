@@ -41,9 +41,10 @@ body {
         @include mob_font_loc-btns;
     }
     &__rest-img {
-        height: 17rem;
+        height: 15.8rem;
         width: 100%;
         background-size: cover;
+        background-position: center;
         &--pal {
             background-image: url(../../assets/images/N_Y88TWmGwA-4.jpg);
         }
@@ -129,8 +130,75 @@ body {
 }
 
 .menu-head {
+    padding: 35px 0 0 0;
+    background-color: $background-color;
+    border-radius: 60px;
+    margin-top: -34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__rest-name {
+        @include mob_font_titlerestname;
+        margin-left:17px;
+    }
+    &__coeur {
+        font-size: 1.5rem;
+        font-weight: 100;
+        margin-right: 41px;
+    }
+}
+
+.menu {
+    margin-top: 20px;
+    @include margin-sides-menu;
+    display:flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.menu-part {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    &__area {
+        position: relative;
+    }
+    &__title {
+        @include mob_font_menuepd;
+    }
+    &__title-line {
+        margin-top: 5px;
+        width: 40px;
+        height: 3px;
+        background-color: $light-blue;
+    }
+}
+
+.menu-tile {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 1.0);
+    overflow: hidden;
+    padding: 10px;
+    display: flex;
+    &__text{
+        
+        &--maintext {
+
+        }
+        &--subtext{
+
+        }
+    }
+    &__price {
+
+    }
+    &__ok {
+
+    }
     
 }
+
 
 .rest-tile {
     position: relative;

@@ -62,9 +62,10 @@ body {
   font-weight: 500;
 }
 .head__rest-img {
-  height: 17rem;
+  height: 15.8rem;
   width: 100%;
   background-size: cover;
+  background-position: center;
 }
 .head__rest-img--pal {
   background-image: url(../../assets/images/N_Y88TWmGwA-4.jpg);
@@ -164,6 +165,64 @@ body {
   gap: 18px;
 }
 
+.menu-head {
+  padding: 35px 0 0 0;
+  background-color: #F7F7F7;
+  border-radius: 60px;
+  margin-top: -34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-head__rest-name {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-left: 17px;
+}
+.menu-head__coeur {
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin-right: 41px;
+}
+
+.menu {
+  margin-top: 20px;
+  margin-left: 13px;
+  margin-right: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.menu-part {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.menu-part__area {
+  position: relative;
+}
+.menu-part__title {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.menu-part__title-line {
+  margin-top: 5px;
+  width: 40px;
+  height: 3px;
+  background-color: #89C8FA;
+}
+
+.menu-tile {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px rgb(0, 0, 0);
+  overflow: hidden;
+  padding: 10px;
+  display: flex;
+}
 .rest-tile {
   position: relative;
   border-radius: 15px;

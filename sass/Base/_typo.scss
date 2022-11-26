@@ -106,6 +106,7 @@ body, {
 @mixin mob_font_menuepd {
     font-size: 1rem;
     font-weight: 300;
+    text-transform: uppercase;
 }
 
 @mixin mob_font_epdtitle {
