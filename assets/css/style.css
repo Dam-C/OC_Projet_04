@@ -52,6 +52,7 @@ body {
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15) inset;
   font-size: 1rem;
   font-weight: 500;
+  background-image: url(../assets/images/Card/N_Y88TWmGwA.jpg);
 }
 
 .fa-location-dot {
@@ -152,13 +153,28 @@ body {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 .rest-tile__container {
   display: block;
-  height: 100%;
 }
 .rest-tile__img {
-  height: 13rem;
+  height: 12.8rem;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.rest-tile__img--img1 {
+  background-image: url(../../assets/images/Card/N_Y88TWmGwA.jpg);
+}
+.rest-tile__img--img2 {
+  background-image: url(../../assets/images/Card/N_Y88TWmGwA-1.jpg);
+}
+.rest-tile__img--img3 {
+  background-image: url(../../assets/images/Card/N_Y88TWmGwA-2.jpg);
+}
+.rest-tile__img--img4 {
+  background-image: url(../../assets/images/Card/N_Y88TWmGwA-3.jpg);
 }
 .rest-tile__new {
   position: absolute;
@@ -188,26 +204,51 @@ body {
   font-size: 1.0625rem;
   font-weight: 300;
 }
-
-.img1 {
-  display: block;
-  width: 100px;
-  height: 100px;
-  background-image: url(../assets/images/Card/N_Y88TWmGwA.jpg);
+.rest-tile__enc--coeur {
+  position: absolute;
+  right: 25px;
+  bottom: 33px;
+  font-size: 1.2rem;
+  font-weight: 100;
 }
 
 .footer {
+  padding: 22px 25px 35px 25px;
   background-color: #353535;
 }
 .footer__title {
+  margin-bottom: 15px;
   font-family: "Shrikhand";
   font-size: 1.125rem;
   font-weight: 400;
   color: #ffffff;
 }
 .footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer__nav--maintext {
   font-size: 1rem;
   font-weight: 500;
+  color: #ffffff;
+}
+.footer__nav--litletext {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+.footer__nav .fa-solid {
+  color: #ffffff;
+}
+
+.rest-top-img {
+  height: 275px;
+  background-image: url(../../assets/images/N_Y88TWmGwA.jpg);
+}
+
+.img1 {
+  background-image: url(../assets/images/Card/N_Y88TWmGwA.jpg);
 }
 
 /*# sourceMappingURL=style.css.map */

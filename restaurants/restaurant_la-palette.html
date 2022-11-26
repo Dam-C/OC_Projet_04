@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    >
     <title>OhMyFood</title>
     <script
       src="https://kit.fontawesome.com/30699aa1e7.js"
@@ -12,45 +18,61 @@
   </head>
 
   <body>
-    <header>
+    <header class="head">
       <h1 class="head__title"><a href="../index.html">ohmyfood</a></h1>
-      <div class="head__img-pal"></div>
     </header>
 
     <main>
-      <section class="menu__entrees">
-        <h2>Entrées</h2>
+<div class="rest-top-img">
 
-        <article class="menu_tile">
-          <div class="tile__text">
-            <h3 class="tile__text--title">Fricassée d'escargots</h3>
-            <p class="tile__text--subtitle">Au piment d'Espelette</p>
-          </div>
-          <p class="tile__price">25€</p>
-          <div class="tile__valid">
-            <i class="fa-solid fa-circle-check"></i>
-          </div>
+</div>
+
+<section class="intro">
+        <article class="intro__container">
+          <h2 class="intro__title">Réservez le menu qui vous convient</h2>
+          <p class="intro__subtext">
+            Découvrez des restaurants d'exception, sélectionnés par nos soins.
+          </p>
+          <button class="intro__button">Explorez nos restaurants</button>
         </article>
       </section>
 
-      <section class="menu__plats">
-        <h2>Plats</h2>
-      </section>
+      <section class="rest">
+        <h2 class="rest__title">Restaurants</h2>
 
-      <section class="menu__desserts">
-        <h2>Desserts</h2>
-      </section>
+        <div class="rest__tiles">
+          
+          <article class="rest-tile">
+            <a
+              href="restaurants/restaurant_la-palette.html"
+              class="rest-tile__container"
+            >
+              <div class="rest-tile__img rest-tile__img--img1"></div>
+              <p class="rest-tile__new">Nouveau</p>
+              <div class="rest-tile__enc">
+                <h3 class="rest-tile__enc--title">La Palette du goût</h3>
+                <p class="rest-tile__enc--subtext">Ménilmontant</p>
+                <i class="fa-regular fa-heart"></i
+                ><i class="fa-solid fa-heart"></i></div
+            ></a>
+          </article>
 
-      <button class="">Commander</button>
+        </div>
+      </section>
     </main>
 
-    <footer>
-      <ul>
-        <li><a href="#">Proposer un restaurant</a></li>
-        <li><a href="#">Devenir Partenaire</a></li>
-        <li><a href="#">Mentions légales</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+    <footer class="footer">
+      <h4 class="footer__title">ohmyfood</h4>
+      <nav class="footer__nav">
+        <a href="#"
+          ><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a
+        >
+        <a href="#"
+          ><i class="fa-solid fa-handshake-angle"></i>Devenir Partenaire</a
+        >
+        <a href="#">Mentions légales</a>
+        <a href="#">Contact</a>
+      </nav>
     </footer>
   </body>
 </html>

@@ -45,9 +45,21 @@
     font-weight: 400;
 }
 
-@mixin mob_font_loc-btns-footertxt-dskfootertxt {
+@mixin mob_font_loc-btns {
     font-size: 1rem;
     font-weight: 500;
+}
+
+@mixin mob_font_footermaintxt-dskfootertxt {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+@mixin mob_font_footerlitletxt-dskfootertxt {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #ffffff;
 }
 
 @mixin mob_font_introtitle-partstitle {
