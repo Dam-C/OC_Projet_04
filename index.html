@@ -25,8 +25,9 @@
     <main>
       <section class="head__loc">
         <p>
-          <i class="fa-solid fa-location-dot fa-black"></i> Paris, Belleville
+          <i class="fa-solid fa-location-dot fa-black"></i>Paris, Belleville
         </p>
+        <i class="fa-solid fa-location-dot fa-black"></i>
       </section>
 
       <section class="intro">
@@ -40,20 +41,23 @@
       </section>
 
       <section class="fnct">
-        <article>
+        <article class="fnct__container">
           <h2 class="fnct__title">Fonctionnement</h2>
-          <div class="fnct__tile">
-            <span class="fnct__tile-nbr">1</span
-            ><i class="fa-solid fa-mobile-screen-button"></i>Choisissez votre
-            restaurant
-          </div>
-          <div class="fnct__tile">
-            <span class="fnct__tile-nbr">2</span
-            ><i class="fa-solid fa-list-ul"></i>Choisissez votre restaurant
-          </div>
-          <div class="fnct__tile">
-            <span class="fnct__tile-nbr">3</span
-            ><i class="fa-solid fa-store"></i>Choisissez votre restaurant
+
+          <div class="fnct__tile-container">
+            <div class="fnct__tile">
+              <span class="fnct__tile-nbr">1</span
+              ><i class="fa-solid fa-mobile-screen-button"></i>Choisissez votre
+              restaurant
+            </div>
+            <div class="fnct__tile">
+              <span class="fnct__tile-nbr">2</span
+              ><i class="fa-solid fa-list-ul"></i>Composez votre menu
+            </div>
+            <div class="fnct__tile">
+              <span class="fnct__tile-nbr">3</span
+              ><i class="fa-solid fa-store"></i>Dégustez au restaurant
+            </div>
           </div>
         </article>
       </section>
@@ -61,21 +65,27 @@
       <section class="rest">
         <h2 class="rest__title">Restaurants</h2>
 
-        <article class="rest-tile">
-          <a
-            href="restaurants/restaurant_la-palette.html"
-            class="rest-tile__container"
-          >
-            <div class="rest-tile__img rest-tile__img--img1"></div>
-            <p class="rest-tile__new">Nouveau</p>
-            <div class="rest-tile__enc">
-              <h3 class="rest-tile__enc--title">La Palette du goût</h3>
-              <p class="rest-tile__enc--subtext">Ménilmontant</p>
-              <i class="fa-regular fa-heart"></i
-              ><i class="fa-solid fa-heart"></i></div
-          ></a>
-        </article>
+        <div class="rest__tiles">
+          
+          <article class="rest-tile">
+            <a
+              href="restaurants/restaurant_la-palette.html"
+              class="rest-tile__container"
+            >
+              <div class="rest-tile__img rest-tile__img--img1"></div>
+              <p class="rest-tile__new">Nouveau</p>
+              <div class="rest-tile__enc">
+                <h3 class="rest-tile__enc--title">La Palette du goût</h3>
+                <p class="rest-tile__enc--subtext">Ménilmontant</p>
+                <i class="fa-regular fa-heart"></i
+                ><i class="fa-solid fa-heart"></i></div
+            ></a>
+          </article>
 
+
+          <div class="img1"></div>
+
+        </div>
       </section>
     </main>
 

@@ -18,13 +18,12 @@
 
 body {
     background-color: $background-color;
-    display: flex;
-    flex-direction: column;
 }
 
 
 .head {
     height: 63px;
+    background-color: #ffffff;
     @include flex-centering-in-bloc;
     &__title {
         @include mob_font_headlogo;
@@ -38,18 +37,26 @@ body {
     }
 }
 
+.fa-location-dot {
+    position: absolute;
+    left: 30%;
+}
+
 .intro {
     margin: 40px 0 60px 0;
     &__container {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
     }
-        &__title {
+    &__title {
+        margin: 0 50px 20px 50px;
         @include mob_font_introtitle-partstitle;
+        text-align: center;
     }
     &__subtext {
+        margin-bottom: 30px;
         @include mob_font_introsubtext;
+        text-align: center;
     }
     &__button {
         @include button;
@@ -57,29 +64,69 @@ body {
 }
 
 .fnct {
+    padding: 50px 0 70px 0;
     background-color: #ffffff;
+    &__container {
+        @include margin-sides;
+    }
     &__title {
+        margin-bottom: 30px;
         @include mob_font_introtitle-partstitle;
     }
+    &__tile-container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
     &__tile {
+        padding: 30px 0 30px 0;
+        margin-left: 12px;
+        border-radius: 20px;
+        background-color: $background-color;
         @include mob_font_loc-btns-footertxt-dskfootertxt;
+        box-shadow:  0px 5px 5px rgba(0, 0, 0, 0.15);
+        & .fa-solid {
+            color: $fnct-grey;
+            margin-right: 25px;
+        }
+    }
+    &__tile-nbr {
+        margin: 0 25px 0 -12px;
+        color: #ffffff;
+        background-color: $color-prim;
+        padding: 2px 7px 2px 7px;
+        border-radius: 20px;
+        @include mob_font_tilnbr-new;
     }
 }
 
 .rest {
+    margin: 55px 0 70px 0;
+    @include margin-sides;
     &__title {
+        margin-bottom: 20px;
         @include mob_font_introtitle-partstitle;
+    }
+    &__tiles {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
     }
 
 }
 
 .rest-tile {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
     &__container {
-
+        display: block;
+        height: 100%;
     }
     &__img {
-        &--img1 {
+        height: 13rem;
 
+        &--img1 {
         }
         &--img2 {
 
@@ -91,10 +138,21 @@ body {
 
         }
     }
-    &--new {
-        @include mob_font_new;
+    &__new {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        @include flex-centering-in-bloc;
+        width: 80px;
+        height: 30px;
+        border-radius: 2px;
+        color: $deep-green;
+        background-color: $color-ter;
+        @include mob_font_tilnbr-new;
     }
     &__enc {
+        padding: 15px 13px 15px 13px;
+        background-color: #ffffff;
         &--title {
             @include mob_font_restname;
         }
@@ -104,6 +162,12 @@ body {
     }
 }
 
+.img1 {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-image: url(../assets/images/Card/N_Y88TWmGwA.jpg);
+}
 .footer {
     background-color: $back-footer;
     &__title {
