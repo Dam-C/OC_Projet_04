@@ -32,15 +32,18 @@
 
 @import "../utils/variables";
 
-
 * {
-    font-family: "Roboto", sans-serif;
     text-decoration: none;
-    color: $black-font;
+    color: #000000;
+
+}
+
+body, {
+    font-family: 'Roboto', sans-serif;
 }
 
 @mixin mob_font_headlogo {
-    font-family: "Shrikhand", cursive;
+    font-family: 'Shrikhand', cursive;
     font-size: 1.875rem;
     font-weight: 400;
 }
@@ -88,14 +91,14 @@
 }
 
 @mixin mob_font_footerlogo {
-    font-family: 'Shrikhand';
+    font-family: 'Shrikhand', cursive;
     font-size: 1.125rem;
     font-weight: 400;
     color: #ffffff;
 }
 
 @mixin mob_font_titlerestname {
-    font-family: 'Shrikhand';
+    font-family: 'Shrikhand', cursive;
     font-size: 1.75rem;
     font-weight: 500;
 }

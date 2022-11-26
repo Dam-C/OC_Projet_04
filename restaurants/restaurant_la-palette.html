@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap"
       rel="stylesheet"
-    >
+    />
     <title>OhMyFood</title>
     <script
       src="https://kit.fontawesome.com/30699aa1e7.js"
@@ -20,58 +20,61 @@
   <body>
     <header class="head">
       <h1 class="head__title"><a href="../index.html">ohmyfood</a></h1>
+      <i class="head__title--arrow fa-solid fa-arrow-left"></i>
     </header>
 
     <main>
-<div class="rest-top-img">
+      <div class="head__rest-img head__rest-img--pal"></div>
 
-</div>
+      <div class="menu-head">
+        <h2 class="menu-head__rest-name">La palette du gout</h2>
+        <i class="menu-head__coeur fa-regular fa-heart"></i>
+      </div>
 
-<section class="intro">
-        <article class="intro__container">
-          <h2 class="intro__title">Réservez le menu qui vous convient</h2>
-          <p class="intro__subtext">
-            Découvrez des restaurants d'exception, sélectionnés par nos soins.
-          </p>
-          <button class="intro__button">Explorez nos restaurants</button>
-        </article>
+      <section class="menu">
+        <section class="menu-part">
+          <h3 class="menu-part__title">Entrées</h3>
+
+          <div class="menu-part__tiles">
+            <article class="menu-tile">
+              <div class="menu-tile__text">
+                <h4 class="menu-tile__text--maintext">Fricassée d'escargots</h4>
+                <p class="menu-tile__text--subtext">Au piment d'Espelette</p>
+              </div>
+              <p class="menu-tile__text--price">25€</p>
+              <div class="menu-tile__text--ok">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </article>
+            <article class="menu-tile">
+              <div class="menu-tile__text">
+                <h4 class="menu-tile__text--maintext">Fricassée d'escargots</h4>
+                <p class="menu-tile__text--subtext">Au piment d'Espelette</p>
+              </div>
+              <p class="menu-tile__text--price">25€</p>
+              <div class="menu-tile__text--ok">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </article>
+
+          </div>
+        </section>
       </section>
 
-      <section class="rest">
-        <h2 class="rest__title">Restaurants</h2>
-
-        <div class="rest__tiles">
-          
-          <article class="rest-tile">
-            <a
-              href="restaurants/restaurant_la-palette.html"
-              class="rest-tile__container"
-            >
-              <div class="rest-tile__img rest-tile__img--img1"></div>
-              <p class="rest-tile__new">Nouveau</p>
-              <div class="rest-tile__enc">
-                <h3 class="rest-tile__enc--title">La Palette du goût</h3>
-                <p class="rest-tile__enc--subtext">Ménilmontant</p>
-                <i class="fa-regular fa-heart"></i
-                ><i class="fa-solid fa-heart"></i></div
-            ></a>
-          </article>
-
-        </div>
-      </section>
+      <button class="menu__button">Commander</button>
     </main>
 
     <footer class="footer">
       <h4 class="footer__title">ohmyfood</h4>
       <nav class="footer__nav">
-        <a href="#"
+        <a href="#" class="footer__nav--maintext"
           ><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a
         >
-        <a href="#"
+        <a href="#" class="footer__nav--maintext"
           ><i class="fa-solid fa-handshake-angle"></i>Devenir Partenaire</a
         >
-        <a href="#">Mentions légales</a>
-        <a href="#">Contact</a>
+        <a href="#" class="footer__nav--litletext">Mentions légales</a>
+        <a href="#" class="footer__nav--litletext">Contact</a>
       </nav>
     </footer>
   </body>

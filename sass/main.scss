@@ -27,6 +27,11 @@ body {
     @include flex-centering-in-bloc;
     &__title {
         @include mob_font_headlogo;
+        &--arrow {
+            position: absolute;
+            left: 23px;
+            font-size: 1.1rem;
+        }
     }
     &__loc {
         height: 50px;
@@ -34,7 +39,14 @@ body {
         background-color: $loc-grey;
         box-shadow:  0px 5px 5px rgba(0, 0, 0, 0.15) inset;
         @include mob_font_loc-btns;
-        background-image: url(../assets/images/Card/N_Y88TWmGwA.jpg);
+    }
+    &__rest-img {
+        height: 17rem;
+        width: 100%;
+        background-size: cover;
+        &--pal {
+            background-image: url(../../assets/images/N_Y88TWmGwA-4.jpg);
+        }
     }
 }
 
@@ -116,6 +128,10 @@ body {
 
 }
 
+.menu-head {
+    
+}
+
 .rest-tile {
     position: relative;
     border-radius: 15px;
@@ -192,14 +208,7 @@ body {
         }
         & .fa-solid {
             color: #ffffff;
+            margin-right: 5px;
         }
     }
-}
-
-.rest-top-img {
-    height: 275px;
-    background-image: url(../../assets/images/N_Y88TWmGwA.jpg);
-}
-.img1 {
-    background-image: url(../assets/images/Card/N_Y88TWmGwA.jpg);
 }

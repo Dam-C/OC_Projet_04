@@ -20,9 +20,12 @@ time, mark, audio, video {
 }
 
 * {
-  font-family: "Roboto", sans-serif;
   text-decoration: none;
-  color: #353535;
+  color: #000000;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -42,6 +45,11 @@ body {
   font-size: 1.875rem;
   font-weight: 400;
 }
+.head__title--arrow {
+  position: absolute;
+  left: 23px;
+  font-size: 1.1rem;
+}
 .head__loc {
   height: 50px;
   display: flex;
@@ -52,7 +60,14 @@ body {
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15) inset;
   font-size: 1rem;
   font-weight: 500;
-  background-image: url(../assets/images/Card/N_Y88TWmGwA.jpg);
+}
+.head__rest-img {
+  height: 17rem;
+  width: 100%;
+  background-size: cover;
+}
+.head__rest-img--pal {
+  background-image: url(../../assets/images/N_Y88TWmGwA-4.jpg);
 }
 
 .fa-location-dot {
@@ -218,7 +233,7 @@ body {
 }
 .footer__title {
   margin-bottom: 15px;
-  font-family: "Shrikhand";
+  font-family: "Shrikhand", cursive;
   font-size: 1.125rem;
   font-weight: 400;
   color: #ffffff;
@@ -240,15 +255,7 @@ body {
 }
 .footer__nav .fa-solid {
   color: #ffffff;
-}
-
-.rest-top-img {
-  height: 275px;
-  background-image: url(../../assets/images/N_Y88TWmGwA.jpg);
-}
-
-.img1 {
-  background-image: url(../assets/images/Card/N_Y88TWmGwA.jpg);
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
