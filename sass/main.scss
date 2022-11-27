@@ -64,7 +64,7 @@ body {
 
 .fa-location-dot {
     position: absolute;
-    left: 30%;
+    margin-left: -150px;;
 }
 
 .intro {
@@ -104,6 +104,7 @@ body {
         gap: 25px;
     }
     &__tile {
+        max-width: 322px;
         padding: 30px 0 30px 0;
         margin-left: 12px;
         border-radius: 20px;
@@ -195,8 +196,9 @@ body {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, .1);
     overflow: hidden;
     display: flex;
+    max-width: 634px;
     &__text{
-        width: 80%;
+        flex:1;
         min-width: 0;
         @include flex-centering-menus;
         &--maintext {

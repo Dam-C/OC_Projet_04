@@ -6,13 +6,13 @@
 }
 
 @mixin margin-sides {
-    margin-left: 20px;
-    margin-right: 20px; 
+    margin-left: min(20px);
+    margin-right: min(20px); 
 }
 
 @mixin margin-sides-menu {
-    margin-left: 13px;
-    margin-right: 13px; 
+    margin-left: min(13px);
+    margin-right: min(13px); 
 }
 
 @mixin flex-centering-menus {
