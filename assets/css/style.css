@@ -74,6 +74,15 @@ body {
 .head__rest-img--pal {
   background-image: url(../../assets/images/N_Y88TWmGwA-4.jpg);
 }
+.head__rest-img--del {
+  background-image: url(../../assets/images/N_Y88TWmGwA-3.jpg);
+}
+.head__rest-img--note {
+  background-image: url(../../assets/images/N_Y88TWmGwA-2.jpg);
+}
+.head__rest-img--alafr {
+  background-image: url(../../assets/images/N_Y88TWmGwA-1.jpg);
+}
 
 .fa-location-dot {
   position: absolute;
