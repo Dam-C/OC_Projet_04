@@ -112,11 +112,18 @@ body, {
 @mixin mob_font_epdtitle {
     font-size: 1.125rem;
     font-weight: 500;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 @mixin mob_font_epdsubtext {
     font-size: 0.9375rem;
     font-weight: 300;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 @mixin mob_font_epdsubprice {

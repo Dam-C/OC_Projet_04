@@ -14,3 +14,17 @@
     margin-left: 13px;
     margin-right: 13px; 
 }
+
+@mixin flex-centering-menus {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 10px 12px 10px;
+}
+
+@mixin flex-centering-menus-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content:end;
+    padding: 0 20px 15px 0 ;
+}
