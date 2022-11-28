@@ -18,28 +18,27 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: $background-color;
-}
-
-
 .head {
-    height: 63px;
-    background-color: #ffffff;
-    @include flex-centering-in-bloc;
     &__title {
+        position: relative;
+        z-index: 2;
+        height: 63px;
+        background-color: #ffffff;
+        @include flex-centering-in-bloc;
         @include mob_font_headlogo;
+        box-shadow:  0px 0px 2px rgba(0, 0, 0, .15);
         &--arrow {
             position: absolute;
             left: 23px;
+            margin-top: 10px;
             font-size: 1.1rem;
         }
     }
     &__loc {
+        z-index: 1;
         height: 50px;
         @include flex-centering-in-bloc;
         background-color: $loc-grey;
-        box-shadow:  0px 5px 5px rgba(0, 0, 0, 0.15) inset;
         @include mob_font_loc-btns;
     }
     &__rest-img {
@@ -68,7 +67,8 @@ body {
 }
 
 .intro {
-    margin: 40px 0 60px 0;
+    padding: 40px 0 60px 0;
+    background-color: $background-color;
     &__container {
         display: flex;
         flex-direction: column;
@@ -91,7 +91,9 @@ body {
 .fnct {
     padding: 50px 0 70px 0;
     background-color: #ffffff;
+    width: auto;
     &__container {
+        width: 334px;
         @include margin-sides;
     }
     &__title {
@@ -101,10 +103,12 @@ body {
     &__tile-container {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 25px;
     }
     &__tile {
-        max-width: 322px;
+        display: flex;
+        width: 334px;
         padding: 30px 0 30px 0;
         margin-left: 12px;
         border-radius: 20px;
@@ -127,7 +131,8 @@ body {
 }
 
 .rest {
-    margin: 55px 0 70px 0;
+    padding: 55px 0 70px 0;
+    background-color: $background-color;
     @include margin-sides;
     &__title {
         margin-bottom: 20px;
@@ -141,31 +146,49 @@ body {
 
 }
 
+.rest-container {
+    max-width: 334px;
+    @include margin-sides;
+}
+
 .menu-head {
-    padding: 35px 0 0 0;
-    background-color: $background-color;
-    border-radius: 60px;
-    margin-top: -34px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+
+    &__container {
+        width: 341px;
+        display: flex;
+        align-items: center;
+        gap:24px;
+        @include margin-sides
+    }
     &__rest-name {
         @include mob_font_titlerestname;
-        margin-left:17px;
     }
     &__coeur {
         font-size: 1.5rem;
         font-weight: 100;
-        margin-right: 41px;
+        margin-right: 1px;
     }
 }
 
+.menu-container {
+    border-radius: 40px 40px 0 0;
+    margin-top: -34px;
+    padding: 35px 0 0 0;
+    max-width: 1055px;
+    background-color: $background-color;
+    @include margin-sides;
+
+}
+
 .menu {
-    margin: 20px 0 40px 0;
+    padding: 20px 13px 40px 13px;
+    background-color: $background-color;
     @include margin-sides-menu;
     display:flex;
     flex-direction: column;
     gap: 40px;
+    max-width:634px;
     &__button {
         width: 186px;
         @include button;
@@ -227,6 +250,7 @@ body {
 
 
 .rest-tile {
+    width: 335px;
     position: relative;
     border-radius: 15px;
     overflow: hidden;
@@ -240,16 +264,16 @@ body {
         background-size: cover;
         background-position: center;
         &--img1 {
-            background-image: url(../../assets/images/Card/N_Y88TWmGwA.jpg);
+            background-image: url(../../assets/images/N_Y88TWmGwA-4.jpg);
         }
         &--img2 {
-            background-image: url(../../assets/images/Card/N_Y88TWmGwA-1.jpg);
+            background-image: url(../../assets/images/N_Y88TWmGwA-2.jpg);
         }
         &--img3 {
-            background-image: url(../../assets/images/Card/N_Y88TWmGwA-2.jpg);
+            background-image: url(../../assets/images/N_Y88TWmGwA-1.jpg);
         }
         &--img4 {
-            background-image: url(../../assets/images/Card/N_Y88TWmGwA-3.jpg);
+            background-image: url(../../assets/images/N_Y88TWmGwA-3.jpg);
         }
     }
     &__new {
@@ -303,6 +327,75 @@ body {
         & .fa-solid {
             color: #ffffff;
             margin-right: 5px;
+        }
+    }
+}
+
+@media screen and (min-width: 1112px) {
+    
+    .head {
+        &__rest-img {
+            &--pal {
+                background-image: url(../../assets/images/N_Y88TWmGwA.jpg);
+            }
+            &--del {
+                background-image: url(../../assets/images/N_Y88TWmGwA-3.jpg);
+            }
+            &--note {
+                background-image: url(../../assets/images/N_Y88TWmGwA-2.jpg);
+            }
+            &--alafr {
+                background-image: url(../../assets/images/N_Y88TWmGwA-1.jpg);
+            }
+        }
+    }
+
+
+    .intro {
+        &__title {
+            @include desk_font_introtitle;
+        }
+    }
+
+    .fnct {
+        &__container {
+            width: 1072px;
+            @include margin-sides;
+        }
+        &__tile-container {
+            width: 1072px;
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+        }
+    }
+
+    .rest-container {
+        max-width: 1072px;
+        flex-direction: row;
+    }
+
+    .rest {
+        &__tiles {
+            flex-direction: row;
+            gap: 26px;
+        }
+    
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 70px;
+        padding: 52px 100px 43px 25px;
+        &__title {
+            margin-bottom: 0;
+        }
+        &__nav {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
         }
     }
 }
