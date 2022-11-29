@@ -83,8 +83,7 @@ body {
 }
 
 .fa-location-dot {
-  position: absolute;
-  margin-left: -150px;
+  margin-right: 10px;
 }
 
 .intro {
@@ -108,16 +107,18 @@ body {
   text-align: center;
 }
 .intro__button {
+  cursor: pointer;
   margin-left: auto;
   margin-right: auto;
   color: #ffffff;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background-color: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 2rem;
   padding: 1rem;
   border: none;
   font-size: 1rem;
   font-weight: 500;
+  transition: all 500ms ease-in;
 }
 
 .fnct {
@@ -159,7 +160,7 @@ body {
 .fnct__tile-nbr {
   margin: 0 25px 0 -12px;
   color: #ffffff;
-  background-color: #9356DC;
+  background-color: hsl(267deg, 66%, 60%);
   padding: 2px 7px 2px 7px;
   border-radius: 20px;
   font-size: 0.875rem;
@@ -230,16 +231,18 @@ body {
 }
 .menu__button {
   width: 186px;
+  cursor: pointer;
   margin-left: auto;
   margin-right: auto;
   color: #ffffff;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background-color: #ffffff;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 2rem;
   padding: 1rem;
   border: none;
   font-size: 1rem;
   font-weight: 500;
+  transition: all 500ms ease-in;
 }
 
 .menu-part {
@@ -269,6 +272,7 @@ body {
   overflow: hidden;
   display: flex;
   max-width: 634px;
+  cursor: pointer;
 }
 .menu-tile__text {
   flex: 1;
@@ -304,16 +308,20 @@ body {
   padding: 0 20px 15px 0;
 }
 .menu-tile__ok {
-  width: 60px;
+  width: 0px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   background-color: #99E2D0;
+  transition: all 250ms ease-out;
 }
 .menu-tile__ok .fa-circle-check {
   font-size: 1.5em;
   color: #ffffff;
+}
+.menu-tile:hover > .menu-tile__ok {
+  width: 60px;
 }
 
 .rest-tile {

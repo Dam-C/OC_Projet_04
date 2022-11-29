@@ -62,8 +62,7 @@
 }
 
 .fa-location-dot {
-    position: absolute;
-    margin-left: -150px;;
+    margin-right: 10px;
 }
 
 .intro {
@@ -220,6 +219,7 @@
     overflow: hidden;
     display: flex;
     max-width: 634px;
+    cursor:pointer;
     &__text{
         flex:1;
         min-width: 0;
@@ -238,12 +238,18 @@
         @include flex-centering-menus-price;
     }
     &__ok {
-        width: 60px;
+        width: 0px;
         @include flex-centering-in-bloc;
         background-color: $color-ter;
+        transition: all 250ms ease-out;
         & .fa-circle-check {
             font-size: 1.5em;
             color: #ffffff;
+        }
+    }
+    &:hover{
+        & > .menu-tile__ok {
+            width: 60px;
         }
     }
 }
