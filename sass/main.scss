@@ -82,7 +82,8 @@
         @include mob_font_introsubtext;
         text-align: center;
     }
-    &__button {
+    &__btn {
+        overflow: hidden;
         @include button;
     }
 }
@@ -239,6 +240,7 @@
     }
     &__ok {
         width: 0px;
+        overflow: hidden;
         @include flex-centering-in-bloc;
         background-color: $color-ter;
         transition: all 250ms ease-out;

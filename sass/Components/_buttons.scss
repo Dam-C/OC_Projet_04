@@ -1,15 +1,47 @@
 @mixin button {
-    cursor:pointer;
+    @include mob_font_loc-btns;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
     margin-left: auto;
     margin-right: auto;
-    color: #ffffff;
-    background-color: #ffffff;
+    color: $color-white;
+    background-image: linear-gradient(hsl(317, 100%, 74%),hsl(267, 66%, 60%));     
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 2rem;
     padding: 1rem;
     border: none;
-    @include mob_font_loc-btns;
     transition: all 500ms ease-in;
+    @include mob_font_loc-btns;
+    z-index: 1;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: linear-gradient(hsl(317, 100%, 84%),hsl(267, 66%, 70%));     
+        transition: all 500ms ease-in;
+        @include mob_font_loc-btns;
+        z-index: -1;
+        opacity: 0;
+    }
+    &:hover {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.55);
+        &::after {
+            opacity: 1;
+        }
+    }
+    &:active {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
+        background-image: none;
+        background-color: $color-white;
+        color: $color-prim;
+        &::after {
+            opacity: 0;
+        }
+    }
 }
 
-// background: linear-gradient($second-gradient-color,$color-prim);
+// linear-gradient(hsl(317, 100%, 74%),hsl(267, 66%, 60%));  

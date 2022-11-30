@@ -106,19 +106,54 @@ body {
   font-weight: 300;
   text-align: center;
 }
-.intro__button {
+.intro__btn {
+  overflow: hidden;
+  font-size: 1rem;
+  font-weight: 500;
+  overflow: hidden;
+  position: relative;
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
   color: #ffffff;
-  background-color: #ffffff;
+  background-image: linear-gradient(hsl(317deg, 100%, 74%), hsl(267deg, 66%, 60%));
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 2rem;
   padding: 1rem;
   border: none;
+  transition: all 500ms ease-in;
   font-size: 1rem;
   font-weight: 500;
+  z-index: 1;
+}
+.intro__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(hsl(317deg, 100%, 84%), hsl(267deg, 66%, 70%));
   transition: all 500ms ease-in;
+  font-size: 1rem;
+  font-weight: 500;
+  z-index: -1;
+  opacity: 0;
+}
+.intro__btn:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.55);
+}
+.intro__btn:hover::after {
+  opacity: 1;
+}
+.intro__btn:active {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
+  background-image: none;
+  background-color: #ffffff;
+  color: hsl(267deg, 66%, 60%);
+}
+.intro__btn:active::after {
+  opacity: 0;
 }
 
 .fnct {
@@ -231,18 +266,52 @@ body {
 }
 .menu__button {
   width: 186px;
+  font-size: 1rem;
+  font-weight: 500;
+  overflow: hidden;
+  position: relative;
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
   color: #ffffff;
-  background-color: #ffffff;
+  background-image: linear-gradient(hsl(317deg, 100%, 74%), hsl(267deg, 66%, 60%));
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 2rem;
   padding: 1rem;
   border: none;
+  transition: all 500ms ease-in;
   font-size: 1rem;
   font-weight: 500;
+  z-index: 1;
+}
+.menu__button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(hsl(317deg, 100%, 84%), hsl(267deg, 66%, 70%));
   transition: all 500ms ease-in;
+  font-size: 1rem;
+  font-weight: 500;
+  z-index: -1;
+  opacity: 0;
+}
+.menu__button:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.55);
+}
+.menu__button:hover::after {
+  opacity: 1;
+}
+.menu__button:active {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
+  background-image: none;
+  background-color: #ffffff;
+  color: hsl(267deg, 66%, 60%);
+}
+.menu__button:active::after {
+  opacity: 0;
 }
 
 .menu-part {
@@ -309,6 +378,7 @@ body {
 }
 .menu-tile__ok {
   width: 0px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
