@@ -28,3 +28,10 @@
     justify-content:end;
     padding: 0 20px 15px 0 ;
 }
+
+@mixin loader-centering {
+    display:flex;
+    flex-direction:column;
+    justify-content:  space-around;
+    align-items: center;
+}

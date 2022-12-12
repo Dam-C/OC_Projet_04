@@ -1,0 +1,135 @@
+// Loader showing when arriving on page
+
+$elemnt-anim-dur: 2100ms;
+$elemnt-anim-delay: 50ms;
+$elemnt2-anim-delay: $elemnt-anim-delay+50ms;
+$loader-time: $elemnt-anim-dur+$elemnt-anim-delay+$elemnt2-anim-delay;
+$page-bg: rgba($color: #ffffff, $alpha: .9);
+
+@keyframes loader-bg {
+  
+  0%,  90% {
+    background-color:rgba($color: #ffffff, $alpha: .9);
+  }
+  100% {
+    background-color:rgba($color: #ffffff, $alpha: 0);
+    visibility: hidden;
+  }
+}
+
+@keyframes loader-anim-elements {
+  0% {
+    transform: scalex(0);
+  }
+  10% {
+    transform: scaleX(1.1);
+  }
+  12% {
+    transform: scaleX(1);
+  }
+  88% {
+    transform: scaleX(1);
+  }
+  90% {
+    transform: scaleX(1.1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes loader-anim-txt {
+  0% {
+    transform: translateY(100%);
+  }
+  20% {
+    transform: translateY(-20%);
+  }
+  25% {
+    transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(0%);
+  }
+  80% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #ffffff, $alpha: .9);
+  @include loader-centering;
+  z-index: 5;
+  animation: loader-bg $loader-time 0ms ease-in-out 1 both;
+}
+.loader {
+  &__container {
+    width: 400px;
+    height: 100px;
+    @include loader-centering;
+  }
+  &__text-area {
+    width: 400px;
+    height: 65px;
+    overflow: hidden;
+    @include loader-centering;
+  }
+  &__text {
+    font-size: 2.7rem;
+    font-weight: 900;
+    font-family: "Shrikhand";
+    transform: translateY(100%);
+    animation: loader-anim-txt 800ms 300ms ease-in-out 2;
+  }
+  &__element {
+    width: 150px;
+    height: 4px;
+    background-color: $color-prim;
+    border-radius: 2px;
+    &--1 {
+      animation: loader-anim-elements $elemnt-anim-dur $elemnt2-anim-delay ease-in-out 1 both;
+    }
+    &--2 {
+      animation: loader-anim-elements $elemnt-anim-dur $elemnt2-anim-delay ease-in-out 1 both;
+    }
+  }
+}
+
+// animations tuiles des menus 
+
+$anim-menu-dur:400ms;
+$anim-menu-delay:150ms;
+$anim-spec-translate:50px;
+
+
+@keyframes anim-menu {
+    from{
+        transform:translateY($anim-spec-translate);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.menu-part {
+    &:nth-child(1) {
+        animation: anim-menu $anim-menu-dur both;
+    }
+    &:nth-child(2) {
+        animation: anim-menu $anim-menu-dur $anim-menu-delay both;
+    }
+    &:nth-child(3) {
+        animation: anim-menu $anim-menu-dur $anim-menu-delay*1.6 both;
+    }
+    &:nth-child(4) {
+        animation: anim-menu $anim-menu-dur $anim-menu-delay*2.1 both;
+    }
+}

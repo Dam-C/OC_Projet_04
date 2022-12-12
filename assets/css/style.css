@@ -28,6 +28,128 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+@keyframes loader-bg {
+  0%, 90% {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+    visibility: hidden;
+  }
+}
+@keyframes loader-anim-elements {
+  0% {
+    transform: scalex(0);
+  }
+  10% {
+    transform: scaleX(1.1);
+  }
+  12% {
+    transform: scaleX(1);
+  }
+  88% {
+    transform: scaleX(1);
+  }
+  90% {
+    transform: scaleX(1.1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+@keyframes loader-anim-txt {
+  0% {
+    transform: translateY(100%);
+  }
+  20% {
+    transform: translateY(-20%);
+  }
+  25% {
+    transform: translateY(0%);
+  }
+  75% {
+    transform: translateY(0%);
+  }
+  80% {
+    transform: translateY(15%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+.page {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 5;
+  animation: loader-bg 2250ms 0ms ease-in-out 1 both;
+}
+
+.loader__container {
+  width: 400px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.loader__text-area {
+  width: 400px;
+  height: 65px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.loader__text {
+  font-size: 2.7rem;
+  font-weight: 900;
+  font-family: "Shrikhand";
+  transform: translateY(100%);
+  animation: loader-anim-txt 800ms 300ms ease-in-out 2;
+}
+.loader__element {
+  width: 150px;
+  height: 4px;
+  background-color: hsl(267deg, 66%, 60%);
+  border-radius: 2px;
+}
+.loader__element--1 {
+  animation: loader-anim-elements 2100ms 100ms ease-in-out 1 both;
+}
+.loader__element--2 {
+  animation: loader-anim-elements 2100ms 100ms ease-in-out 1 both;
+}
+
+@keyframes anim-menu {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.menu-part:nth-child(1) {
+  animation: anim-menu 400ms both;
+}
+.menu-part:nth-child(2) {
+  animation: anim-menu 400ms 150ms both;
+}
+.menu-part:nth-child(3) {
+  animation: anim-menu 400ms 240ms both;
+}
+.menu-part:nth-child(4) {
+  animation: anim-menu 400ms 315ms both;
+}
+
 * {
   box-sizing: border-box;
 }
