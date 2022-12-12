@@ -45,18 +45,18 @@
         height: 15.8rem;
         width: 100%;
         background-size: cover;
-        background-position: center;
+        background-position: 50% 60%;
         &--pal {
-            background-image: url(../../assets/images/N_Y88TWmGwA-4.jpg);
+            background-image: url(../../assets/images/img-pal.jpg);
         }
         &--del {
-            background-image: url(../../assets/images/N_Y88TWmGwA-3.jpg);
+            background-image: url(../../assets/images/img-del.jpg);
         }
         &--note {
-            background-image: url(../../assets/images/N_Y88TWmGwA-2.jpg);
+            background-image: url(../../assets/images/img-not.jpg);
         }
         &--alafr {
-            background-image: url(../../assets/images/N_Y88TWmGwA-1.jpg);
+            background-image: url(../../assets/images/img-alaf.jpg);
         }
     }
 }
@@ -108,16 +108,26 @@
     }
     &__tile {
         display: flex;
+        box-sizing: border-box;
+        vertical-align: middle;
         width: 334px;
-        padding: 30px 0 30px 0;
+        padding: 25px 0 25px 0;
         margin-left: 12px;
         border-radius: 20px;
         background-color: $background-color;
         @include mob_font_loc-btns;
-        box-shadow:  0px 5px 5px rgba(0, 0, 0, 0.15);
+        box-shadow:  0px 5px 15px rgba(0, 0, 0, 0.15);
+        transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+        &:hover {
+            background-color: $color-prim-tuile;
+            & > .fa-solid {
+                color: $color-prim;                
+            }            
+        }
         & .fa-solid {
             color: $fnct-grey;
             margin-right: 25px;
+            margin-top: 2px;
         }
     }
     &__tile-nbr {
@@ -143,7 +153,6 @@
         flex-direction: column;
         gap: 18px;
     }
-
 }
 
 .rest-container {
@@ -152,22 +161,28 @@
 }
 
 .menu-head {
-
-
     &__container {
         width: 341px;
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap:24px;
         @include margin-sides
     }
     &__rest-name {
         @include mob_font_titlerestname;
     }
-    &__coeur {
-        font-size: 1.5rem;
-        font-weight: 100;
-        margin-right: 1px;
+    &__container-icon {
+        @include btn-coeur-container;
+        position: relative;
+        margin-right: 24px;
+    }
+    &__icon {
+        @include btn-coeur-fill;
+        position: absolute;
+        top: 0;
+    }
+    &__icon-out {
+        @include btn-coeur-outline;
     }
 }
 
@@ -272,16 +287,16 @@
         background-size: cover;
         background-position: center;
         &--img1 {
-            background-image: url(../../assets/images/N_Y88TWmGwA-4.jpg);
+            background-image: url(../../assets/images/img-pal.jpg);
         }
         &--img2 {
-            background-image: url(../../assets/images/N_Y88TWmGwA-2.jpg);
+            background-image: url(../../assets/images/img-not.jpg);
         }
         &--img3 {
-            background-image: url(../../assets/images/N_Y88TWmGwA-1.jpg);
+            background-image: url(../../assets/images/img-alaf.jpg);
         }
         &--img4 {
-            background-image: url(../../assets/images/N_Y88TWmGwA-3.jpg);
+            background-image: url(../../assets/images/img-del.jpg);
         }
     }
     &__new {
@@ -305,14 +320,24 @@
         &--subtext {
             @include mob_font_restloc;
         }
-        &--coeur {
-            position: absolute;
-            right: 25px;
-            bottom: 33px;
-            font-size: 1.2rem;
-            font-weight: 100;
-        }
     }
+}
+
+.container-icon {
+    @include btn-coeur-container;
+    position: absolute;
+    right: 20px;
+    bottom: 25px;
+ }
+  
+.icon {
+    @include btn-coeur-fill;
+}
+  
+.icon-out {
+    @include btn-coeur-outline;
+    position: absolute;
+    top: 0px;
 }
 
 .footer {
@@ -341,24 +366,6 @@
 
 @media screen and (min-width: 1112px) {
     
-    .head {
-        &__rest-img {
-            &--pal {
-                background-image: url(../../assets/images/N_Y88TWmGwA.jpg);
-            }
-            &--del {
-                background-image: url(../../assets/images/N_Y88TWmGwA-3.jpg);
-            }
-            &--note {
-                background-image: url(../../assets/images/N_Y88TWmGwA-2.jpg);
-            }
-            &--alafr {
-                background-image: url(../../assets/images/N_Y88TWmGwA-1.jpg);
-            }
-        }
-    }
-
-
     .intro {
         &__title {
             @include desk_font_introtitle;
