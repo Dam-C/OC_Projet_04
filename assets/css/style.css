@@ -396,7 +396,6 @@ body {
 }
 .menu-head__icon-out path {
   fill: none;
-  stroke: 1;
   stroke: #000;
 }
 
@@ -638,7 +637,6 @@ body {
 }
 .icon-out path {
   fill: none;
-  stroke: 1;
   stroke: #000;
 }
 
