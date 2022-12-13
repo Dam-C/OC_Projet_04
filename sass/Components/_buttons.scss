@@ -1,10 +1,11 @@
+// "main" button
+
 @mixin button {
     @include mob_font_loc-btns;
     overflow: hidden;
     position: relative;
     cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
+    @include margin-sides;
     color: $color-white;
     background-image: linear-gradient(hsl(317, 100%, 74%),hsl(267, 66%, 60%));     
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
@@ -34,28 +35,32 @@
         }
     }
 }
-//    &:active {
-//        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
-//        background-image: none;
-//        background-color: $color-white;
-//        color: $color-prim;
-//        &::after {
-//            opacity: 0;
-//        }
-//    }}
 
-// linear-gradient(hsl(317, 100%, 74%),hsl(267, 66%, 60%));  
+// arrow back to landingpage
+
+@mixin arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  @include flex-centering-in-bloc ;
+  position: absolute;
+  left: 23px;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0);
+  transition: box-shadow 250ms ease-in-out;
+  &:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  }
+}
+
+
+// Bouton coeur qui se remplit
 
 $coeur-fill-dur: 300ms;
 
-
 @mixin btn-coeur-container {
-    display:flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content:space-around;
-
-
+  @include flex-centering-in-bloc;
 }
 
 @mixin btn-coeur-fill {
@@ -73,7 +78,7 @@ $coeur-fill-dur: 300ms;
     }
     &::before {
       content:"";
-        width:22px;
+      width:22px;
       height:22px;
       position:absolute;
       top:0;
@@ -86,7 +91,6 @@ $coeur-fill-dur: 300ms;
       transition:transform $coeur-fill-dur ease-in-out;
     }
 }
-
 
 @mixin btn-coeur-outline {
       & path {

@@ -65,7 +65,7 @@ $page-bg: rgba($color: #ffffff, $alpha: .9);
   width: 100%;
   height: 100%;
   background-color: rgba($color: #ffffff, $alpha: .9);
-  @include loader-centering;
+  @include flex-centering-in-bloc;
   z-index: 5;
   animation: loader-bg $loader-time 0ms ease-in-out 1 both;
 }
@@ -73,14 +73,14 @@ $page-bg: rgba($color: #ffffff, $alpha: .9);
   &__container {
     width: 400px;
     height: 100px;
-    @include loader-centering;
-  }
+    @include flex-centering-in-bloc;
+}
   &__text-area {
     width: 400px;
     height: 65px;
     overflow: hidden;
-    @include loader-centering;
-  }
+    @include flex-centering-in-bloc;
+}
   &__text {
     font-size: 2.7rem;
     font-weight: 900;
@@ -102,7 +102,7 @@ $page-bg: rgba($color: #ffffff, $alpha: .9);
   }
 }
 
-// animations tuiles des menus 
+// animations tiles menus 
 
 $anim-menu-dur:400ms;
 $anim-menu-delay:150ms;

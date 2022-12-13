@@ -1,19 +1,11 @@
 @import "./base/reset";
-@import "./base/base";
 @import "./base/typo";
 
 @import "./utils/variables";
 @import "./utils/mixins";
-@import "./utils/functions";
 @import "./utils/animations";
 
 @import "./components/buttons";
-
-@import "./layout/header";
-@import "./layout/nav";
-@import "./layout/container";
-@import "./layout/form";
-
 
 * {
     box-sizing: border-box;
@@ -29,10 +21,8 @@
         @include mob_font_headlogo;
         box-shadow:  0px 0px 2px rgba(0, 0, 0, .15);
         &--arrow {
-            position: absolute;
-            left: 23px;
-            margin-top: 10px;
-            font-size: 1.1rem;
+            @include arrow-btn;
+
         }
     }
     &__loc {
@@ -41,6 +31,12 @@
         @include flex-centering-in-bloc;
         background-color: $loc-grey;
         @include mob_font_loc-btns;
+        &--input {
+            @include mob_font_loc-btns;
+            background: transparent;
+            border: none;
+            max-width: 200px;
+        }
     }
     &__rest-img {
         height: 15.8rem;
@@ -67,14 +63,13 @@
 }
 
 .intro {
-    padding: 40px 0 60px 0;
+    padding: 40px 10px 60px 10px;
     background-color: $background-color;
     &__container {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
     }
     &__title {
-        margin: 0 50px 20px 50px;
+        margin-bottom: 20px;
         @include mob_font_introtitle-partstitle;
         text-align: center;
     }
@@ -102,8 +97,7 @@
         @include mob_font_introtitle-partstitle;
     }
     &__tile-container {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         align-items: center;
         gap: 25px;
     }
@@ -150,8 +144,7 @@
         @include mob_font_introtitle-partstitle;
     }
     &__tiles {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         gap: 18px;
     }
 }
@@ -159,6 +152,58 @@
 .rest-container {
     max-width: 334px;
     @include margin-sides;
+}
+
+.rest-tile {
+    min-width: 335px;
+    flex: 1;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    &__container {
+        display: block;
+    }
+    &__img {
+        height: 12.8rem;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        &--img1 {
+            background-image: url(../../assets/images/img-pal.jpg);
+        }
+        &--img2 {
+            background-image: url(../../assets/images/img-not.jpg);
+        }
+        &--img3 {
+            background-image: url(../../assets/images/img-alaf.jpg);
+        }
+        &--img4 {
+            background-image: url(../../assets/images/img-del.jpg);
+        }
+    }
+    &__new {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        @include flex-centering-in-bloc;
+        width: 80px;
+        height: 30px;
+        border-radius: 2px;
+        color: $deep-green;
+        background-color: $color-ter;
+        @include mob_font_tilnbr-new;
+    }
+    &__enc {
+        padding: 15px 13px 15px 13px;
+        background-color: #ffffff;
+        &--title {
+            @include mob_font_restname;
+        }
+        &--subtext {
+            @include mob_font_restloc;
+        }
+    }
 }
 
 .menu-head {
@@ -200,9 +245,8 @@
 .menu {
     padding: 20px 13px 40px 13px;
     background-color: $background-color;
-    @include margin-sides-menu;
-    display:flex;
-    flex-direction: column;
+    @include margin-sides; 
+    @include flex-column;
     gap: 40px;
     max-width:634px;
     &__button {
@@ -212,8 +256,7 @@
 }
 
 .menu-part {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     gap: 12px;
     &__area {
         position: relative;
@@ -273,56 +316,7 @@
 }
 
 
-.rest-tile {
-    width: 335px;
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    &__container {
-        display: block;
-    }
-    &__img {
-        height: 12.8rem;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        &--img1 {
-            background-image: url(../../assets/images/img-pal.jpg);
-        }
-        &--img2 {
-            background-image: url(../../assets/images/img-not.jpg);
-        }
-        &--img3 {
-            background-image: url(../../assets/images/img-alaf.jpg);
-        }
-        &--img4 {
-            background-image: url(../../assets/images/img-del.jpg);
-        }
-    }
-    &__new {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        @include flex-centering-in-bloc;
-        width: 80px;
-        height: 30px;
-        border-radius: 2px;
-        color: $deep-green;
-        background-color: $color-ter;
-        @include mob_font_tilnbr-new;
-    }
-    &__enc {
-        padding: 15px 13px 15px 13px;
-        background-color: #ffffff;
-        &--title {
-            @include mob_font_restname;
-        }
-        &--subtext {
-            @include mob_font_restloc;
-        }
-    }
-}
+
 
 .container-icon {
     @include btn-coeur-container;
@@ -349,8 +343,7 @@
         @include mob_font_footerlogo;
     }
     &__nav {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         gap: 8px;
         &--maintext {
             @include mob_font_footermaintxt-dskfootertxt;
@@ -364,6 +357,37 @@
         }
     }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1111px) {
+    .rest-container {
+        max-width: 690px;
+    }
+    .rest {
+        &__tiles {
+            flex-direction: row;
+            flex-wrap:wrap;
+            justify-content: space-between;
+            gap: 18px;
+        }
+    }
+        .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 70px;
+        padding: 52px 100px 43px 25px;
+        &__title {
+            margin-bottom: 0;
+        }
+        &__nav {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+        }
+    }
+}
+
+
 
 @media screen and (min-width: 1112px) {
     
@@ -394,11 +418,13 @@
     .rest {
         &__tiles {
             flex-direction: row;
-            gap: 26px;
+            flex-wrap: nowrap;
+            gap: 32px;
         }
-    
     }
-
+    .rest-tile {
+        min-width: 0;
+    }
     .footer {
         display: flex;
         flex-direction: row-reverse;
