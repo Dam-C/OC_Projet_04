@@ -194,15 +194,13 @@ body {
   justify-content: space-around;
   align-items: center;
   background-color: #EAEAEA;
-  font-size: 1rem;
-  font-weight: 500;
 }
 .head__loc--input {
   font-size: 1rem;
   font-weight: 500;
   background: transparent;
   border: none;
-  max-width: 200px;
+  width: 120px;
 }
 .head__rest-img {
   height: 15.8rem;
@@ -565,6 +563,7 @@ body {
   display: flex;
   max-width: 634px;
   cursor: pointer;
+  user-select: none;
 }
 .menu-tile__text {
   flex: 1;
