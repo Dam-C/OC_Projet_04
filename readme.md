@@ -1,6 +1,9 @@
 # ohmyfood
 _
 
+Lien GITHub : https://github.com/Dam-C/OC_Projet_04
+Lien site : https://dam-c.github.io/OC_Projet_04/
+
 ## _Presentation_
 
 ohmyfood is the 4th class project from the OpenClassrooms "Intégrateur Web" course.
